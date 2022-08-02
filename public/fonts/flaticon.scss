@@ -1,0 +1,49 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?d0e35b206bdfef8a534a11e16edc3e80") format("truetype"),
+url("./flaticon.woff?d0e35b206bdfef8a534a11e16edc3e80") format("woff"),
+url("./flaticon.woff2?d0e35b206bdfef8a534a11e16edc3e80") format("woff2"),
+url("./flaticon.eot?d0e35b206bdfef8a534a11e16edc3e80#iefix") format("embedded-opentype"),
+url("./flaticon.svg?d0e35b206bdfef8a534a11e16edc3e80#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "chef-hat": "\f101",
+    "cooker": "\f102",
+    "chef-hat-1": "\f103",
+    "chef-hat-with-cutlery-restaurant-symbol": "\f104",
+    "chef-hat-2": "\f105",
+    "cook-hat": "\f106",
+);
+
+.flaticon-chef-hat:before {
+    content: map-get($flaticon-map, "chef-hat");
+}
+.flaticon-cooker:before {
+    content: map-get($flaticon-map, "cooker");
+}
+.flaticon-chef-hat-1:before {
+    content: map-get($flaticon-map, "chef-hat-1");
+}
+.flaticon-chef-hat-with-cutlery-restaurant-symbol:before {
+    content: map-get($flaticon-map, "chef-hat-with-cutlery-restaurant-symbol");
+}
+.flaticon-chef-hat-2:before {
+    content: map-get($flaticon-map, "chef-hat-2");
+}
+.flaticon-cook-hat:before {
+    content: map-get($flaticon-map, "cook-hat");
+}

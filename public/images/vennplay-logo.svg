@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="81" viewBox="0 0 88 81">
+  <g id="Group_7204" data-name="Group 7204" transform="translate(-360 -90)">
+    <g id="Group_6358" data-name="Group 6358" transform="translate(360 90)">
+      <circle id="Ellipse_4708" data-name="Ellipse 4708" cx="15.733" cy="15.733" r="15.733" transform="translate(0 18.478)" fill="#ffa915"/>
+      <path id="Path_10446" data-name="Path 10446" d="M-6249.565,4097.869l-9.791-16.957a10.334,10.334,0,0,0-17.9,0l-1.941,3.364a18.82,18.82,0,0,1,5.539,13.361,18.846,18.846,0,0,1-7.7,15.218,10.426,10.426,0,0,0,3.265.516h19.581A10.334,10.334,0,0,0-6249.565,4097.869Z" transform="translate(6308.269 -4063.427)" fill="#9c1cff"/>
+      <path id="Path_10447" data-name="Path 10447" d="M-6127.327,3998.684h-6.952a12.255,12.255,0,0,0-12.255,12.255v.379a12.707,12.707,0,0,1,1.531,2.122l11.749,20.349a12.363,12.363,0,0,1-1.807,14.81c.26.016.519.028.782.028h6.952a12.258,12.258,0,0,0,12.257-12.257v-25.431A12.257,12.257,0,0,0-6127.327,3998.684Z" transform="translate(6195.949 -3998.684)" fill="#60d394"/>
+    </g>
+    <text id="vennplay" transform="translate(360 165)" fill="#ebebeb" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">vennplay</tspan></text>
+  </g>
+</svg>
