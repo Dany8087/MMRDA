@@ -56,14 +56,6 @@ class auth extends Controller
 
     public function Dashboard(){
         $result=DB::select(DB::raw('select count(*) as total_work, CompanyName from contractor_works group by CompanyName'));
-
-
-        $workData = DB::table('contractors')
-        ->join('contractor_works','contractors.CompanyName',"=",'contractor_works.CompanyName')
-        ->where('contractors.CompanyName',"=",$CompanyName)
-        ->get();
-        // $result1=DB::select(DB::raw());
-        // dd($result1);
         $chartData="";
         foreach($result as $list){
             $chartData.="['".$list->CompanyName."', ".$list->total_work."],";

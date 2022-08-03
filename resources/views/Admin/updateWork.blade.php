@@ -62,8 +62,8 @@
                   <label class="form-label">Start Date</label>
                   <div class='input-group date' id='datetimepicker' name="Startdate" value="{{$contractor_works['Startdate']}}">
                     <input type='text' class="form-control" name="Startdate"  value="{{$contractor_works['Startdate']}}" placeholder="{{$contractor_works['Startdate']}}" style="position: unset;" />
-                    <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
+                    <span class="input-group-addon"  value="{{$contractor_works['Startdate']}}">
+                    <span class="glyphicon glyphicon-calendar"  value="{{$contractor_works['Startdate']}}"></span>
                     </span>
                   </div>
                     <span class="text-danger">@error('Startdate') {{$message}} @enderror</span>
@@ -71,12 +71,12 @@
                 </div>
                 <div class="col col-md-4 col-12">
                   <div class="mb-4 form-group">
-                  <label class="form-label">Completion Date</label>
-                  <div class='input-group date' id='datetimepicker1' name="CompletionDate" value="{{$contractor_works['CompletionDate']}}">
-                    <input type='text' class="form-control" name="CompletionDate" value="{{$contractor_works['CompletionDate']}}" placeholder="{{$contractor_works['CompletionDate']}}" style="position: unset;" />
-                    <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                    <label class="form-label">Completion Date</label>
+                    <div class='input-group date' id='datetimepicker1' name="CompletionDate" value="{{$contractor_works['CompletionDate']}}">
+                      <input type='text' class="form-control" name="CompletionDate" value="{{$contractor_works['CompletionDate']}}" placeholder="{{$contractor_works['CompletionDate']}}" style="position: unset;" />
+                      <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
                   </div>
                   <span class="text-danger">@error('CompletionDate') {{$message}} @enderror</span>
                   </div>

@@ -98,8 +98,8 @@ class contractorWorkController extends Controller
         $contractor_works->CompanyName = $request->CompanyName;
         $contractor_works->ShortDescription = $request->ShortDescription;
         $contractor_works->LongDescription = $request->LongDescription;
-        $contractor_works->Startdate = $request->Startdate;
-        $contractor_works->CompletionDate = $request->CompletionDate;
+        $contractor_works->Startdate = $Startdate;
+        $contractor_works->CompletionDate = $CompletionDate;
         $contractor_works->Penaltyrate = $request->Penaltyrate;
         $contractor_works->line1 = $request->line1;
         $contractor_works->Line2 = $request->Line2;
@@ -107,7 +107,7 @@ class contractorWorkController extends Controller
         $contractor_works->State = $request->State;
         $contractor_works->Country = $request->Country;
         $contractor_works->typeOfRoadConstructed = $request->typeOfRoadConstructed;
-        $contractor_works->expiryDate = $request->expiryDate;
+        $contractor_works->expiryDate = $expiryDate;
 
         $res = $contractor_works->save();
 

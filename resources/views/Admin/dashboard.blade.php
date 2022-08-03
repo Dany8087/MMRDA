@@ -30,11 +30,13 @@
 
         chart.draw(data, options);
       }
+      
     </script>
   </head>
   <body>
     <div class="row">
     <div id="piechart" style="width: 900px; height: 500px;" class="col-lg-6 col-12"></div>
+    <div id="piechart1" style="width: 900px; height: 500px;" class="col-lg-6 col-12"></div>
     </div>
   </body>
 </html>
