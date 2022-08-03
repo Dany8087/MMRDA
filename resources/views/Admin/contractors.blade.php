@@ -54,6 +54,7 @@
                             </div>
                             <!--//dropdown-toggle-->
                             <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href={{"viewContractorWork/".$items['CompanyName']}}><i class="fas fa-pencil-alt"></i>View Work</a></li>
                               <li><a class="dropdown-item" href={{"updateContractor/".$items['id']}}><i class="fas fa-pencil-alt"></i>Update</a></li>
                             </ul>
                           </div>

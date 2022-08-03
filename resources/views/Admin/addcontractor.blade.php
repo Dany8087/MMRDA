@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="col col-6" style="margin-top: 25px:">
-              <div class="text-end"> <a href="contractors" class="grad-btn grad-btn-color"><img src="images/left-arrow-color.svg" alt="arrow" style="margin-right:15px; "/> Back </a> </div>
+              <div class="text-end"> <a href="contractors" class="grad-btn grad-btn-color"><img src="images/left-arrow-color.svg" alt="" style="margin-right:15px; "/> Back </a> </div>
             </div>
           </div>
           <form action="add-contractor" method="post" enctype="multipart/form-data">

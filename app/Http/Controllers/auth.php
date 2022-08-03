@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Hash;
 
@@ -54,7 +55,21 @@ class auth extends Controller
     }
 
     public function Dashboard(){
-        return view('Admin.dashboard');
+        $result=DB::select(DB::raw('select count(*) as total_work, CompanyName from contractor_works group by CompanyName'));
+
+
+        $workData = DB::table('contractors')
+        ->join('contractor_works','contractors.CompanyName',"=",'contractor_works.CompanyName')
+        ->where('contractors.CompanyName',"=",$CompanyName)
+        ->get();
+        // $result1=DB::select(DB::raw());
+        // dd($result1);
+        $chartData="";
+        foreach($result as $list){
+            $chartData.="['".$list->CompanyName."', ".$list->total_work."],";
+        }
+        $chartdetails['chartData']=rtrim($chartData,",");
+        return view('Admin.dashboard',$chartdetails);
     }
 
     public function logout(){

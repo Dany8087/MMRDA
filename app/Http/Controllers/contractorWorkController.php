@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\contractorWork;
 use App\Models\contractor;
 use carbon\carbon;
@@ -11,6 +12,7 @@ class contractorWorkController extends Controller
 {
     public function contractorWork(){
         $workData = contractorWork::all();
+        $contractorsdata = contractor::all();
         return view ('Admin.contractorWork',['contractor_works'=>$workData]);
     }
 
@@ -21,7 +23,7 @@ class contractorWorkController extends Controller
 
     public function addingwork(Request $request){
         $request->validate([
-            'CompanyName'=>'required|regex:/^[a-zA-Z]+$/u|max:255',
+            'CompanyName'=>'required',
             'ShortDescription'=>'required|max:100',
             'LongDescription'=>'required|max:500',
             'Startdate'=>'required',
@@ -120,6 +122,5 @@ class contractorWorkController extends Controller
         $contractor_works = contractorWork::find($id);
         $contractor_works->delete();
         return redirect('contractorWork');
-
     }
 }

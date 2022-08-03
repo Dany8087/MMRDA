@@ -5,6 +5,7 @@ use App\Http\Controllers\auth;
 use App\Http\Controllers\contractorsController;
 use App\Http\Controllers\contractorWorkController;
 use App\Http\Controllers\adminProfileController;
+use App\Http\Controllers\dashboardController;
 
 
 /*
@@ -33,6 +34,7 @@ Route::get('/addcontractor',[contractorsController::class,'addcontractor'])->nam
 Route::post('/add-contractor',[contractorsController::class,'addingcontractor'])->name('add-contractor');
 Route::get('/updateContractor/{id}',[contractorsController::class,'updateContractor'])->name('updateContractor');
 Route::post('/updatingContractor',[contractorsController::class,'updatingContractor']);
+Route::get('/viewContractorWork/{CompanyName}',[contractorsController::class,'viewContractorWork']);
 
 Route::get('/contractorWork',[contractorWorkController::class,'contractorWork'])->name('contractorWork');
 Route::get('/addWork',[contractorWorkController::class,'addWork'])->name('addWork');

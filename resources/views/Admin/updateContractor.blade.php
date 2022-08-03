@@ -28,12 +28,12 @@
           <div class="alert alert-danger">{{Session::get('fail')}}</div>
           @endif
             @csrf
-            <input type="hidden" name="id" value="{{$contractors['id']}}">
+            <input type="hidden" name="id" value="{{$company['id']}}">
             <div class="row">
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Company Name</label>
-                  <input type="text" class="form-control" name="CompanyName" value="{{$contractors['CompanyName']}}" placeholder="Enter Company Name" />
+                  <input type="text" class="form-control" name="CompanyName" value="{{$company['CompanyName']}}" placeholder="Enter Company Name" />
                   <span class="text-danger">@error('CompanyName') {{$message}} @enderror</span>
                 </div>
               </div>
@@ -41,7 +41,7 @@
                 <div class="mb-4 form-group">
                 <label class="form-label">Company Type</label>
                 <select class="form-select form-select-lg" aria-label="Default select example" name="Companytype">
-                <option name="" value="{{$contractors['Companytype']}}">{{$contractors['Companytype']}}</option>
+                <option name="" value="{{$company['Companytype']}}">{{$company['Companytype']}}</option>
                 <option name="" value="Pvt. Ltd.">Pvt. Ltd.</option>
                 <option name="" value="Public Ltd.">Public Ltd.</option>
                 <option name="" value="LLP">LLP</option>
@@ -53,21 +53,21 @@
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Contact Persons name</label>
-                  <input type="text" class="form-control" name="ContactPerson" value="{{$contractors['ContactPerson']}}" placeholder="Enter Contact Persons name" />
+                  <input type="text" class="form-control" name="ContactPerson" value="{{$company['ContactPerson']}}" placeholder="Enter Contact Persons name" />
                   <span class="text-danger">@error('ContactPerson') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Contact Number</label>
-                  <input type="text" class="form-control" name="ContactNumber" value="{{$contractors['ContactNumber']}}" placeholder="Enter Contact Number" />
+                  <input type="text" class="form-control" name="ContactNumber" value="{{$company['ContactNumber']}}" placeholder="Enter Contact Number" />
                     <span class="text-danger">@error('ContactNumber') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Regirtered Email</label>
-                  <input type="email" class="form-control" name="Email" value="{{$contractors['Email']}}" placeholder="Enter Regirtered Email" />
+                  <input type="email" class="form-control" name="Email" value="{{$company['Email']}}" placeholder="Enter Regirtered Email" />
                   <span class="text-danger">@error('CategorySubtitle') {{$message}} @enderror</span>
                 </div>
               </div>

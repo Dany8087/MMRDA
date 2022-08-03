@@ -61,7 +61,7 @@
                   <div class="mb-4 form-group">
                   <label class="form-label">Start Date</label>
                   <div class='input-group date' id='datetimepicker' name="Startdate" value="{{$contractor_works['Startdate']}}">
-                    <input type='text' class="form-control" name="Startdate" placeholder="{{$contractor_works['Startdate']}}" style="position: unset;" />
+                    <input type='text' class="form-control" name="Startdate"  value="{{$contractor_works['Startdate']}}" placeholder="{{$contractor_works['Startdate']}}" style="position: unset;" />
                     <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -73,7 +73,7 @@
                   <div class="mb-4 form-group">
                   <label class="form-label">Completion Date</label>
                   <div class='input-group date' id='datetimepicker1' name="CompletionDate" value="{{$contractor_works['CompletionDate']}}">
-                    <input type='text' class="form-control" name="CompletionDate" placeholder="{{$contractor_works['CompletionDate']}}" style="position: unset;" />
+                    <input type='text' class="form-control" name="CompletionDate" value="{{$contractor_works['CompletionDate']}}" placeholder="{{$contractor_works['CompletionDate']}}" style="position: unset;" />
                     <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -144,8 +144,8 @@
                       <div class="mb-4 form-group">
                       <label class="form-label">Expiry Date</label>
                       <div class='input-group date' id='datetimepicker2' name="expiryDate" value="{{$contractor_works['expiryDate']}}">
-                            <input type='text' class="form-control"  name="expiryDate" placeholder="{{$contractor_works['expiryDate']}}" style="position: unset;"/>
-                            <span class="input-group-addon">
+                            <input type='text' class="form-control"  name="expiryDate" value="{{$contractor_works['expiryDate']}}" placeholder="{{$contractor_works['expiryDate']}}" style="position: unset;"/>
+                            <span class="input-group-addon" value="{{$contractor_works['expiryDate']}}">
                             <span class="glyphicon glyphicon-calendar"></span>
                             </span>
                             </div>

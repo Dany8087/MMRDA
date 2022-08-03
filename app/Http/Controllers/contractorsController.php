@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\contractor;
+use App\Models\contractorWork;
 
 class contractorsController extends Controller
 {
@@ -43,8 +44,8 @@ class contractorsController extends Controller
 
 
     public function updateContractor($id){
-        $contractordata = contractor::find($id);
-        return view('Admin.updateContractor',['contractors'=>$contractordata]);
+        $companydata = contractor::find($id);
+        return view('Admin.updateContractor',['company'=>$companydata]);
     }
 
     public function updatingContractor(Request $request){
@@ -53,7 +54,7 @@ class contractorsController extends Controller
             'Companytype'=>'required',
             'ContactPerson'=>'required',
             'ContactNumber'=>'required|min:10|numeric',
-            'Email'=>'required|email|unique:contractors'
+            'Email'=>'required|email'
         ]);
 
         $contractors = contractor::find($request->id);
@@ -70,5 +71,13 @@ class contractorsController extends Controller
         }else{
             return back()->with('fail', 'Something went wrong');
         }
+    }
+
+    public function viewContractorWork($CompanyName){
+        $workData = DB::table('contractors')
+        ->join('contractor_works','contractors.CompanyName',"=",'contractor_works.CompanyName')
+        ->where('contractors.CompanyName',"=",$CompanyName)
+        ->get();
+        return view('Admin.viewContractorWork',['contractor_works'=>$workData]);
     }
 }
