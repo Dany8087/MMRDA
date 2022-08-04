@@ -27,7 +27,7 @@
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">MMRDA Admin Login</p>
-                                    <form class="mx-1 mx-md-4" action="Dashboard" method="post">
+                                    <form class="mx-1 mx-md-4" action="/home" method="post">
                                         @if(Session::has('success'))
                                        <div class="alert alert-success">{{Session::get('success')}}</div>
                                        @endif

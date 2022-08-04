@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Hash;
 
-class auth extends Controller
+class Auth extends Controller
 {
     public function login(){
         return view("Auth.index");
@@ -44,7 +44,7 @@ class auth extends Controller
         if($user){
             if(Hash::check($request->password, $user->password)) {
                 $request->session()->put('loginId', $user->id);
-                return view('Admin.dashboard');
+                return view('Admin.home');
             }else{
                 return back()->with('fail', 'Password does not match.');
             }
@@ -54,15 +54,10 @@ class auth extends Controller
         }
     }
 
-    public function Dashboard(){
-        $result=DB::select(DB::raw('select count(*) as total_work, CompanyName from contractor_works group by CompanyName'));
-        $chartData="";
-        foreach($result as $list){
-            $chartData.="['".$list->CompanyName."', ".$list->total_work."],";
-        }
-        $chartdetails['chartData']=rtrim($chartData,",");
-        return view('Admin.dashboard',$chartdetails);
+    public function home(){
+        return view('Admin.home');
     }
+
 
     public function logout(){
         if(Session::has('loginId')){

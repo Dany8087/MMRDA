@@ -8,7 +8,7 @@ use App\Models\contractorWork;
 use App\Models\contractor;
 use carbon\carbon;
 
-class contractorWorkController extends Controller
+class ContractorWorkController extends Controller
 {
     public function contractorWork(){
         $workData = contractorWork::all();

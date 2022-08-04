@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\contractor;
 use App\Models\contractorWork;
 
-class contractorsController extends Controller
+class ContractorsController extends Controller
 {
     public function contractors(){
         $contractorsdata = contractor::all();

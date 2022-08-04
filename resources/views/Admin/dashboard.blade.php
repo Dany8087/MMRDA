@@ -16,12 +16,10 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
           <?php echo $chartData?>
         ]);
-
         var options = {
           title: 'Work Distribution According to Company'
         };
@@ -36,7 +34,6 @@
   <body>
     <div class="row">
     <div id="piechart" style="width: 900px; height: 500px;" class="col-lg-6 col-12"></div>
-    <div id="piechart1" style="width: 900px; height: 500px;" class="col-lg-6 col-12"></div>
     </div>
   </body>
 </html>
